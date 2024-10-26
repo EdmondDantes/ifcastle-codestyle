@@ -48,7 +48,7 @@ return static function (RectorConfig $rectorConfig) : void {
                              TernaryConditionVariableAssignmentRector::class,
                              //SymplifyQuoteEscapeRector::class,
                              StringClassNameToClassConstantRector::class,
-                             CatchExceptionNameMatchingTypeRector::class,
+                             //CatchExceptionNameMatchingTypeRector::class,
                              SplitDoubleAssignRector::class,
                              //EncapsedStringsToSprintfRector::class,
                              //WrapEncapsedVariableInCurlyBracesRector::class,
