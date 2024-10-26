@@ -50,7 +50,7 @@ return static function (RectorConfig $rectorConfig) : void {
                              StringClassNameToClassConstantRector::class,
                              CatchExceptionNameMatchingTypeRector::class,
                              SplitDoubleAssignRector::class,
-                             EncapsedStringsToSprintfRector::class,
+                             //EncapsedStringsToSprintfRector::class,
                              WrapEncapsedVariableInCurlyBracesRector::class,
                              NewlineBeforeNewAssignSetRector::class,
                              MakeInheritedMethodVisibilitySameAsParentRector::class,

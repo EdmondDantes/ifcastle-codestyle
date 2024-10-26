@@ -157,7 +157,7 @@ final class CodeQualityLevel
             CallUserFuncToMethodCallRector::class,
             CallUserFuncWithArrowFunctionToInlineRector::class,
             CountArrayToEmptyArrayComparisonRector::class,
-            FlipTypeControlToUseExclusiveTypeRector::class,
+            //FlipTypeControlToUseExclusiveTypeRector::class,
             InlineArrayReturnAssignRector::class,
             InlineIsAInstanceOfRector::class,
             TernaryFalseExpressionToIfRector::class,

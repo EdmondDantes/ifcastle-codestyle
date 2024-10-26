@@ -19,7 +19,7 @@ class RectorConfigurator
             __DIR__ . '/code-quality.php',
             __DIR__ . '/type-declaration.php',
             SetList::INSTANCEOF,
-            SetList::EARLY_RETURN,
+            __DIR__ . '/early-return.php',
             SetList::DEAD_CODE
         ]);
     }
