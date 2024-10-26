@@ -11,6 +11,7 @@ use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
 use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
 use Rector\Set\ValueObject\LevelSetList;
@@ -40,7 +41,8 @@ class RectorConfigurator
             // Note: RemoveAlwaysElseRector not understood when parameter has different interfaces
             RemoveAlwaysElseRector::class,
             FlipTypeControlToUseExclusiveTypeRector::class,
-            RemoveUselessParamTagRector::class
+            RemoveUselessParamTagRector::class,
+            RemoveUselessReturnTagRector::class
         ]);
     }
     
