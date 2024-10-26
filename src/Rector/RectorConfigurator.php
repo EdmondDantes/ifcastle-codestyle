@@ -15,8 +15,10 @@ class RectorConfigurator
     {
         $rectorConfig->sets([
             LevelSetList::UP_TO_PHP_83,
-            SetList::CODE_QUALITY,
-            SetList::CODING_STYLE,
+            __DIR__ . '/coding-style.php',
+            __DIR__ . '/code-quality.php',
+            __DIR__ . '/type-declaration.php',
+            SetList::INSTANCEOF,
             SetList::EARLY_RETURN,
             SetList::DEAD_CODE
         ]);
