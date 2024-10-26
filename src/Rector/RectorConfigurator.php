@@ -12,10 +12,14 @@ use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
+use Rector\EarlyReturn\Rector\If_\ChangeOrIfContinueToMultiContinueRector;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
+use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
+use Rector\TypeDeclaration\Rector\ArrowFunction\AddArrowFunctionReturnTypeRector;
+use Rector\TypeDeclaration\Rector\Closure\AddClosureVoidReturnTypeWhereNoReturnRector;
 
 class RectorConfigurator
 {
@@ -42,7 +46,12 @@ class RectorConfigurator
             RemoveAlwaysElseRector::class,
             FlipTypeControlToUseExclusiveTypeRector::class,
             RemoveUselessParamTagRector::class,
-            RemoveUselessReturnTagRector::class
+            RemoveUselessReturnTagRector::class,
+            DisallowedEmptyRuleFixerRector::class,
+            AddArrowFunctionReturnTypeRector::class,
+            AddClosureVoidReturnTypeWhereNoReturnRector::class,
+            ChangeOrIfContinueToMultiContinueRector::class,
+            AddArrowFunctionReturnTypeRector::class
         ]);
     }
     
