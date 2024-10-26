@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace IfCastle\CodeStyle\Rector;
 
+use Rector\CodeQuality\Rector\Concat\JoinStringConcatRector;
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
 use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
 use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
@@ -51,7 +52,8 @@ class RectorConfigurator
             AddArrowFunctionReturnTypeRector::class,
             AddClosureVoidReturnTypeWhereNoReturnRector::class,
             ChangeOrIfContinueToMultiContinueRector::class,
-            AddArrowFunctionReturnTypeRector::class
+            AddArrowFunctionReturnTypeRector::class,
+            JoinStringConcatRector::class
         ]);
     }
     
