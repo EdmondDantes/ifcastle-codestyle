@@ -26,6 +26,7 @@ class Config extends PhpCsFixerConfig
         }
     }
 
+    #[\Override]
     public function getRules(): array
     {
         return [
