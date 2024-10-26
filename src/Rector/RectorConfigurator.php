@@ -18,7 +18,7 @@ class RectorConfigurator
             __DIR__ . '/coding-style.php',
             __DIR__ . '/code-quality.php',
             __DIR__ . '/type-declaration.php',
-            SetList::INSTANCEOF,
+            __DIR__ . '/instanceof.php',
             __DIR__ . '/early-return.php',
             SetList::DEAD_CODE
         ]);
