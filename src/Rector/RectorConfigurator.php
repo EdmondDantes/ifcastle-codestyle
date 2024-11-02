@@ -13,6 +13,7 @@ use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
+use Rector\DeadCode\Rector\If_\RemoveAlwaysTrueIfConditionRector;
 use Rector\EarlyReturn\Rector\If_\ChangeOrIfContinueToMultiContinueRector;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
@@ -35,7 +36,7 @@ class RectorConfigurator
             SetList::EARLY_RETURN,
             SetList::DEAD_CODE,
         ]);
-        
+
         $rectorConfig->skip([
             RestoreDefaultNullToNullableTypePropertyRector::class,
             FlipTypeControlToUseExclusiveTypeRector::class,
@@ -53,14 +54,16 @@ class RectorConfigurator
             AddClosureVoidReturnTypeWhereNoReturnRector::class,
             ChangeOrIfContinueToMultiContinueRector::class,
             AddArrowFunctionReturnTypeRector::class,
-            JoinStringConcatRector::class
+            JoinStringConcatRector::class,
+            // Warning: A rule can break the code if it does "not understand" the context and reasons.
+            RemoveAlwaysTrueIfConditionRector::class,
         ]);
     }
-    
+
     public static function skipForTests(string $testDir, RectorConfig $rectorConfig): void
     {
         $rectorConfig->skip([
-        
+
         ]);
     }
 }
