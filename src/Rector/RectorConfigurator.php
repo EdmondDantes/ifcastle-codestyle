@@ -11,6 +11,7 @@ use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
 use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
 use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
+use Rector\DeadCode\Rector\Assign\RemoveUnusedVariableAssignRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
 use Rector\DeadCode\Rector\If_\RemoveAlwaysTrueIfConditionRector;
@@ -57,6 +58,8 @@ class RectorConfigurator
             JoinStringConcatRector::class,
             // Warning: A rule can break the code if it does "not understand" the context and reasons.
             RemoveAlwaysTrueIfConditionRector::class,
+            // Warning: Can't work with the Traits
+            RemoveUnusedVariableAssignRector::class,
         ]);
     }
 
