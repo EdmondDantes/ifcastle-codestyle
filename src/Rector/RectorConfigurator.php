@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace IfCastle\CodeStyle\Rector;
 
+use Rector\CodeQuality\Rector\ClassMethod\LocallyCalledStaticMethodToNonStaticRector;
 use Rector\CodeQuality\Rector\Concat\JoinStringConcatRector;
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
 use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
@@ -60,6 +61,8 @@ class RectorConfigurator
             RemoveAlwaysTrueIfConditionRector::class,
             // Warning: Can't work with the Traits
             RemoveUnusedVariableAssignRector::class,
+            // Crazy rule that can break the code
+            LocallyCalledStaticMethodToNonStaticRector::class,
         ]);
     }
 
