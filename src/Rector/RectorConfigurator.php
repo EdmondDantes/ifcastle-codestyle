@@ -13,9 +13,11 @@ use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
 use Rector\CodingStyle\Rector\String_\SymplifyQuoteEscapeRector;
 use Rector\Config\RectorConfig;
 use Rector\DeadCode\Rector\Assign\RemoveUnusedVariableAssignRector;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUnusedPublicMethodParameterRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
 use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
 use Rector\DeadCode\Rector\If_\RemoveAlwaysTrueIfConditionRector;
+use Rector\DeadCode\Rector\Property\RemoveUnusedPrivatePropertyRector;
 use Rector\EarlyReturn\Rector\If_\ChangeOrIfContinueToMultiContinueRector;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
@@ -63,6 +65,9 @@ class RectorConfigurator
             RemoveUnusedVariableAssignRector::class,
             // Crazy rule that can break the code
             LocallyCalledStaticMethodToNonStaticRector::class,
+            // Warning: Can't work with the Attributes
+            RemoveUnusedPublicMethodParameterRector::class,
+            RemoveUnusedPrivatePropertyRector::class
         ]);
     }
 
