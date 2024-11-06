@@ -67,7 +67,7 @@ class RectorConfigurator
             LocallyCalledStaticMethodToNonStaticRector::class,
             // Warning: Can't work with the Attributes
             RemoveUnusedPublicMethodParameterRector::class,
-            RemoveUnusedPrivatePropertyRector::class
+            RemoveUnusedPrivatePropertyRector::class,
         ]);
     }
 
