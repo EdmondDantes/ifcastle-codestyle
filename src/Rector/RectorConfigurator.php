@@ -20,6 +20,7 @@ use Rector\DeadCode\Rector\If_\RemoveAlwaysTrueIfConditionRector;
 use Rector\DeadCode\Rector\Property\RemoveUnusedPrivatePropertyRector;
 use Rector\EarlyReturn\Rector\If_\ChangeOrIfContinueToMultiContinueRector;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
+use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
@@ -68,6 +69,7 @@ class RectorConfigurator
             // Warning: Can't work with the Attributes
             RemoveUnusedPublicMethodParameterRector::class,
             RemoveUnusedPrivatePropertyRector::class,
+            StringClassNameToClassConstantRector::class,
         ]);
     }
 
