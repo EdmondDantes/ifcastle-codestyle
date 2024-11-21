@@ -23,6 +23,7 @@ use Rector\EarlyReturn\Rector\If_\ChangeOrIfContinueToMultiContinueRector;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
+use Rector\Php80\Rector\Catch_\RemoveUnusedVariableInCatchRector;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
@@ -74,6 +75,8 @@ class RectorConfigurator
             StringClassNameToClassConstantRector::class,
             WhileNullableToInstanceofRector::class,
             SwitchTrueToIfRector::class,
+            // Can remove the variable that is used in the catch block
+            RemoveUnusedVariableInCatchRector::class,
         ]);
     }
 
