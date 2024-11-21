@@ -7,7 +7,6 @@ namespace IfCastle\CodeStyle\Rector;
 use Rector\CodeQuality\Rector\ClassMethod\LocallyCalledStaticMethodToNonStaticRector;
 use Rector\CodeQuality\Rector\Concat\JoinStringConcatRector;
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
-use Rector\CodeQuality\Rector\Switch_\SwitchTrueToIfRector;
 use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
 use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
 use Rector\CodingStyle\Rector\Encapsed\WrapEncapsedVariableInCurlyBracesRector;
@@ -28,6 +27,7 @@ use Rector\Set\ValueObject\SetList;
 use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
 use Rector\TypeDeclaration\Rector\ArrowFunction\AddArrowFunctionReturnTypeRector;
 use Rector\TypeDeclaration\Rector\Closure\AddClosureVoidReturnTypeWhereNoReturnRector;
+use Rector\TypeDeclaration\Rector\While_\WhileNullableToInstanceofRector;
 
 class RectorConfigurator
 {
@@ -71,7 +71,7 @@ class RectorConfigurator
             RemoveUnusedPublicMethodParameterRector::class,
             RemoveUnusedPrivatePropertyRector::class,
             StringClassNameToClassConstantRector::class,
-            SwitchTrueToIfRector::class,
+            WhileNullableToInstanceofRector::class,
         ]);
     }
 
