@@ -15,7 +15,7 @@
         }
     },
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "friendsofphp/php-cs-fixer": "^3.64",
         "rector/rector": "^1.2",
         "phpstan/phpstan": "^1.12"
